@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:if="${param.success}">
+<div>You have Successfully Registered To our Application</div>
+</div>
+<form th:action="@{/registration}" method="POST" th:object="${user}">
+<input type="text" th:field="*{firstName}" placeholder="First Name" required>
+
+<input type="text" th:field="*{lastName}" placeholder="last Name" required>
+
+<input type="text" th:field="*{email}" placeholder="Email" required>
+
+<input type="password" th:field="*{password}" placeholder="password" required>
+
+<input type="submit">Submit<a></a>
+</form>
+</body>
+</html>
